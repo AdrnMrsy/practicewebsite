@@ -1,0 +1,227 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'open Sans', sans-serif;
+}
+
+body{
+  height: 100%;
+  background-color: rgb(252, 241, 241);
+  background-image:url(/img/ph1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: white ;
+  font-size: 1rem;
+}
+
+li a:hover{
+  color:darkgreen;
+}
+header{
+  position: relative;
+  padding: 0 2rem;
+}
+.navbar{
+  width:100%;
+  height:60px;
+  max-width: 1200px;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+font-size: 1.5rem;
+font-weight: bold;
+}
+.navbar .links{
+  display:flex;
+  gap:2rem;
+}
+.navbar .toggle_btn{
+  color:aliceblue;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display:none;
+}
+.action_btn{
+  background-color: orange;
+  color: aliceblue;
+  padding:0.6rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size:0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action_btn:hover{
+  scale:1.05;
+  color: aliceblue;
+}
+.action_btn:active{
+  scale:0.95;
+}
+
+
+.dropdown_menu{
+  position:absolute;
+  right:2rem;
+  top:60px;
+  width: 300px;
+  height:0;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px) ;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1000;
+}
+
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu li{
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/*HERO*/
+section#hero {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color:aliceblue;
+}
+#h1-main{
+  border: solid 2px white;
+  padding: 30px;
+  backdrop-filter: blur(2px);
+}
+#hero h1{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/*inspo*/
+#schedules{
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color:aliceblue;
+  border: solid 2px white;
+}
+#inspo {
+  padding: 20px;
+  position: relative;
+}
+#prevButton,
+#nextButton {
+  position: absolute; /* Position the buttons absolutely */
+  top: 50%; /* Position vertically centered */
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#prevButton {
+  left: 20px; /* Position left button 10px from the left edge */
+}
+
+#nextButton {
+  right: 20px; /* Position right button 10px from the right edge */
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snap to each slide */
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  display: flex;
+  scroll-snap-align: start; /* Snap each slide to the start */
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+
+.slide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; /* Adjust background color and opacity */
+  color: white;
+  padding: 100px;
+  text-align: center;
+}
+
+.slide-overlay h2,
+.slide-overlay p {
+  margin: 0;
+}
+
+/* Add responsive styles as needed */
+@media (max-width: 768px) {
+  .slide-text {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* responsive*/
+
+@media (max-width:992px) {
+  .navbar .links,
+  .navbar .action_btn{
+    display: none;
+  }
+
+  .navbar .toggle_btn{
+    display: block;
+  }
+}
+
+@media (max-width:576px){
+  .dropdown_menu {
+    left:2rem;
+    width: unset;
+  }
+}

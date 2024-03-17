@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: System-ui, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(/img/ph1.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+}
+
+.login-container,
+.info-container {
+  background-color: transparent;
+  border: 2px solid rgba(225, 225, 225, 0.2);
+  backdrop-filter: blur(1.5px);
+  box-shadow: rgba(0, 0, 0, 0.1);
+  width: 420px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 50px 30px 30px;
+}
+
+.login-container h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.login-container .form-group {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  margin: 30px 0;
+}
+
+.form-group input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(225, 225, 225, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 5px 10px 20px;
+}
+
+.form-group input::placeholder {
+  color: #fff;
+}
+
+.form-group i {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50);
+  font-size: 20px;
+  padding: 0px 20px;
+}
+
+button {
+  background-color: #fff;
+  color: #333;
+  width: 106%;
+  height: 45px;
+  outline: none;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+.info-content {
+  background-color: transparent;
+  background: url(forquote.jpg) center/cover; /* Combine background image and size */
+  border: 2px solid rgba(225, 225, 225, 0.2);
+  backdrop-filter: blur(1.5px);
+  box-shadow: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 400px;
+}
+
+  
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+  }
+  
+  .login-container,
+  .info-container {
+    width: 82%; /* Full width on smaller screens */
+    height: 100%;
+    margin: 0px 150px 0px 0px;
+  }
+}
